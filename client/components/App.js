@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import Todos from './Todos';
 import CreateTodo from './CreateTodo';
+import EditTodo from './EditTodo';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTodos } from '../store/todosSlice';
 import axios from 'axios';
@@ -28,6 +29,7 @@ const App = () => {
       <Routes>
         <Route path='/todos/create' element={<CreateTodo />} />
         <Route path='/' element={<Todos />} />
+        <Route path='/todos/:id' element={<EditTodo/ >}/>
       </Routes>
     </div>
   );
