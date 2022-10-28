@@ -27,9 +27,9 @@ const App = () => {
       </h1>
       <Link to='/todos/create'>Create A New Todo</Link>
       <Routes>
-        <Route path='/todos/create' element={<CreateTodo />} />
         <Route path='/' element={<Todos />} />
-        <Route path='/todos/:id' element={<EditTodo/ >}/>
+        <Route path='/todos/:todoId' element={<EditTodo />}/>
+        <Route path='/todos/create' element={<CreateTodo />} />
       </Routes>
     </div>
   );
